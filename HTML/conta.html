@@ -1,0 +1,221 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Minha conta
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #2d3748;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const emailElement = document.getElementById('email');
+            const emailIcon = document.getElementById('email-icon');
+            const usernameElement = document.getElementById('username');
+            const usernameIcon = document.getElementById('username-icon');
+            const modal = document.getElementById('username-modal');
+            const closeModal = document.getElementById('close-modal');
+            const saveUsername = document.getElementById('save-username');
+            const usernameInput = document.getElementById('username-input');
+
+            emailIcon.addEventListener('click', function () {
+                if (emailElement.textContent.includes('*')) {
+                    emailElement.textContent = 'pessoa1@gmail.com';
+                } else {
+                    emailElement.textContent = 'p*****1@gmail.com';
+                }
+            });
+
+            usernameIcon.addEventListener('click', function () {
+                modal.style.display = 'block';
+                usernameInput.value = usernameElement.textContent.trim();
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            saveUsername.addEventListener('click', function () {
+                const newUsername = usernameInput.value.trim();
+                if (newUsername !== '') {
+                    usernameElement.textContent = newUsername;
+                }
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            modal.addEventListener('mousedown', function (event) {
+                if (event.target == modal) {
+                    modal.dataset.mouseDownOutside = 'true';
+                } else {
+                    modal.dataset.mouseDownOutside = 'false';
+                }
+            });
+
+            modal.addEventListener('mouseup', function (event) {
+                if (modal.dataset.mouseDownOutside === 'true' && event.target == modal) {
+                    modal.style.display = 'none';
+                }
+                modal.dataset.mouseDownOutside = 'false';
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-[#e7f6ff] text-white font-sans">
+    <div class="container mx-auto p-4">
+        <div class="flex justify-between items-center mb-8">
+            <a href="./dashboard.html"><img alt="Logotipo Elysium" class="h-12"
+                    src="../IMG/Elysium-logo-nome.png" /></a>
+            <button class="border border-red-500 text-white-500 bg-red-500 px-4 py-2 rounded">
+                Sair
+            </button>
+        </div>
+        <h1 class="text-3xl font-bold mb-8 text-black">
+            Minha conta
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4">
+                    Detalhes
+                </h2>
+                <div class="mb-4">
+                    <label class="block text-gray-400">
+                        Nome de usuário
+                    </label>
+                    <div class="flex items-center bg-gray-700 p-2 rounded">
+                        <span id="username" class="flex-1">
+                            Pedro
+                        </span>
+                        <i id="username-icon" class="fas fa-pencil-alt text-gray-400 cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-400">
+                        E-mail
+                    </label>
+                    <div class="flex items-center bg-gray-700 p-2 rounded">
+                        <span id="email" class="flex-1">
+                            p*****1@gmail.com
+                        </span>
+                        <i id="email-icon" class="fas fa-eye text-gray-400 cursor-pointer"></i>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Você criou sua conta Elysium em: 29/09/2024
+                </p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4">
+                    Assinatura
+                </h2>
+                <p class="mb-2">
+                    <span class="text-gray-400">
+                        Modo de assinatura:
+                    </span>
+                    Oferta Especial de Pagamento Único 50%
+                </p>
+                <p class="mb-2">
+                    <span class="text-gray-400">
+                        Status da assinatura:
+                    </span>
+                    <span class="text-green-500">
+                        Ativo
+                    </span>
+                </p>
+                <p class="mb-2">
+                    <span class="text-gray-400">
+                        Próximo pagamento:
+                    </span>
+                    Nunca
+                </p>
+                <p class="mb-4">
+                    <span class="text-gray-400">
+                        Forma de pagamento:
+                    </span>
+                    Cartões de Crédito/Débito
+                </p>
+                <h3 class="text-lg font-semibold mb-2">
+                    Privacidade e segurança
+                </h3>
+                <div class="flex items-center mb-4">
+                    <input checked="" class="toggle-checkbox" type="checkbox" />
+                    <span class="ml-2">
+                        Permitir que o Elysium envie e-mails promocionais
+                    </span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">
+                    Esta opção nos permite utilizar seu e-mail para enviar novidades, ofertas e informações sobre nossos produtos e serviços.
+                    <a class="text-blue-500" href="./privacidade.html">
+                        Saiba mais aqui.
+                    </a>
+                </p>
+                <div class="bg-gray-700 p-2 rounded inline-block hover:bg-gray-600">
+                    <button class="text-red-500">
+                        Deletar Conta
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-gray-800 mt-4">
+                <a class="text-teal-500" href="./uso.html">
+                    Termos de Uso
+                </a>
+                ,
+                <a class="text-teal-500" href="./privacidade.html">
+                    Política de Privacidade
+                </a>
+                , e
+                <a class="text-teal-500" href="./cookies.html">
+                    Política de Cookies
+                </a>
+                . Você pode encontrar todos os termos e outras políticas e diretrizes aqui.
+            </p>
+            <p class="text-gray-800 mt-12">
+                d9b0e422-17c5-4bdc-94bc-d1b33d987e39
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="username-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="text-white float-right cursor-pointer">&times;</span>
+            <h2 class="text-xl font-semibold mb-4">Alterar Nome de Usuário</h2>
+            <input id="username-input" type="text" class="w-full p-2 mb-4 bg-gray-700 text-white rounded" />
+            <button id="save-username" class="bg-teal-500 text-white px-4 py-2 rounded">Salvar</button>
+        </div>
+    </div>
+</body>
+
+</html>
