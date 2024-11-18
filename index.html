@@ -1,46 +1,135 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Elysium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 text-[#3eb5e7]">
     <header>
-        <nav>
-            <ul>
-                <li>Elysium</li>
-                <li>Comprar</li>
-                <li>Suporte</li>
-                <li>Minha Conta</li>
-            </ul>
+        <nav class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="#">
+                            <img alt="Company logo with the name Elysium" class="h-8 w-auto" height="32"
+                                src="../IMG/Elysium-logo-nome.png"
+                                width="auto" />
+                        </a>
+                    </div>
+                    <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                        <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="#">
+                            Comprar
+                        </a>
+                        <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="#">
+                            Suporte
+                        </a>
+                        <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                            href="#">
+                            Minha Conta
+                        </a>
+                    </div>
+                    <div class="flex items-center sm:hidden">
+                        <button aria-controls="mobile-menu" aria-expanded="false"
+                            class="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            id="mobile-menu-button">
+                            <span class="sr-only">
+                                Open main menu
+                            </span>
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                        href="#">
+                        Comprar
+                    </a>
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                        href="#">
+                        Suporte
+                    </a>
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                        href="#">
+                        Minha Conta
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Gestão completa do seu negócio de forma simples e unificada.</h1>
-        <p>O Elysium permite gerenciar seu negócio com facilidade, integrando vendas, estoque, finanças e muito mais. Use-o para otimizar sua operação e simplificar sua gestão!</p>
-        <a href="./HTML/login.html">Comece Já!</a>
-        <h2>Transforme a gestão do seu negócio com o Elysium</h2>
-        <p>O Elysium é o dashboard completo para pequenos empresários, integrando ferramentas que centralizam todas as operações do seu negócio em um só lugar.
-            Melhore sua eficiência e tome decisões inteligentes com dados reais e fáceis de acessar.</p>
-        <h2>Gerencie suas operações com o Elysium</h2>
-        <p>De vendas e estoque a finanças e relatórios, o Elysium simplifica a gestão de cada aspecto do seu negócio. Nossa plataforma amigável torna a análise de dados intuitiva, permitindo que você se concentre no crescimento da sua empresa.</p>
-        <h2>A escolha dos pequenos empresários</h2>
-        <p>O Elysium é projetado para ajudar negócios de pequeno porte a escalarem com eficiência. Descubra como nossas ferramentas integradas podem ajudar sua empresa a crescer sem complicações.</p>
-        <h2>Simplifique, centralize, cresça</h2>
-        <p>Com o Elysium, você tem o poder de monitorar suas operações em tempo real, economizando tempo e otimizando processos. Tudo o que seu negócio precisa, disponível em um único dashboard.</p>
-        <h2>Experimente o Elysium</h2>
-        <p>Comece a transformar seu negócio hoje. Cadastre-se e descubra como o Elysium pode facilitar sua gestão empresarial.</p>
-        
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4">Gestão completa do seu negócio de forma simples e unificada.</h1>
+            <p class="text-lg text-black mb-6">O Elysium permite gerenciar seu negócio com facilidade, integrando vendas, estoque, finanças e muito mais. Use-o para otimizar sua operação e simplificar sua gestão!</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" href="./HTML/login.html">Comece Já!</a>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">Plano Básico</h2>
+                <p class="text-black mb-4">Ideal para pequenas empresas que estão começando.</p>
+                <ul class="text-black mb-4">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Gestão de clientes</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Faturamento e cobranças</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Relatórios básicos</li>
+                </ul>
+                <div class="text-3xl font-bold text-black mb-4">R$ 49,90/mês</div>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Assinar Agora</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4">Plano Premium</h2>
+                <p class="text-black mb-4">Para empresas que precisam de mais recursos e suporte dedicado.</p>
+                <ul class="text-black mb-4">
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Todos os recursos do Plano Básico</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Gestão de projetos</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Suporte prioritário</li>
+                    <li><i class="fas fa-check text-green-500 mr-2"></i>Relatórios avançados</li>
+                </ul>
+                <div class="text-3xl font-bold text-black mb-4">R$ 99,90/mês</div>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Assinar Agora</button>
+            </div>
+        </section>
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Transforme a gestão do seu negócio com o Elysium</h2>
+            <p class="text-lg text-black mb-6">O Elysium é o dashboard completo para pequenos empresários, integrando ferramentas que centralizam todas as operações do seu negócio em um só lugar. Melhore sua eficiência e tome decisões inteligentes com dados reais e fáceis de acessar.</p>
+        </section>
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Gerencie suas operações com o Elysium</h2>
+            <p class="text-lg text-black mb-6">De vendas e estoque a finanças e relatórios, o Elysium simplifica a gestão de cada aspecto do seu negócio. Nossa plataforma amigável torna a análise de dados intuitiva, permitindo que você se concentre no crescimento da sua empresa.</p>
+        </section>
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">A escolha dos pequenos empresários</h2>
+            <p class="text-lg text-black mb-6">O Elysium é projetado para ajudar negócios de pequeno porte a escalarem com eficiência. Descubra como nossas ferramentas integradas podem ajudar sua empresa a crescer sem complicações.</p>
+        </section>
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Simplifique, centralize, cresça</h2>
+            <p class="text-lg text-black mb-6">Com o Elysium, você tem o poder de monitorar suas operações em tempo real, economizando tempo e otimizando processos. Tudo o que seu negócio precisa, disponível em um único dashboard.</p>
+        </section>
+        <section class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Experimente o Elysium</h2>
+            <p class="text-lg text-black mb-6">Comece a transformar seu negócio hoje. Cadastre-se e descubra como o Elysium pode facilitar sua gestão empresarial.</p>
+        </section>
     </main>
-    <footer>
-        <img src="#" alt="Simbolo do IOS">
-        <ul>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Políticas de Privacidade</a></li>
-            <li><a href="#">Termos de Uso</a></li>
-        </ul>
-        <span>© 2024 Lysis Hub. São Paulo, Brasil</span>
+    <footer class="bg-white shadow-md mt-12">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-600">
+            <img alt="Símbolo do IOS" class="mx-auto mb-4" height="100" src="./IMG/IOS-Logo.png" width="200"/>
+            <ul class="flex justify-center space-x-4 mb-4">
+                <li><a class="text-gray-600 hover:text-blue-600" href="#">Legal</a></li>
+                <li><a class="text-gray-600 hover:text-blue-600" href="#">Políticas de Privacidade</a></li>
+                <li><a class="text-gray-600 hover:text-blue-600" href="#">Termos de Uso</a></li>
+            </ul>
+            <span>© 2024 Lysis Hub. São Paulo, Brasil</span>
+        </div>
     </footer>
 </body>
 </html>
