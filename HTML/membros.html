@@ -1,0 +1,420 @@
+<html>
+
+<head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body class="font-roboto bg-gray-100">
+  <nav class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="#">
+                    <img alt="Company logo, a simple geometric shape" class="h-8 w-8" height="32"
+                        src="https://storage.googleapis.com/a1aa/image/sAFFhsOfLfuyy0FkHEbYsOJsrVmjeabUge0wrgLsfYHeQlJ8E.jpg"
+                        width="32" />
+                </a>
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    href="./dashboard.html">
+                    Dashboard
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    href="./Financeiro.html">
+                    Financeiro
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    href="./membros.html">
+                    Membros
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    href="#">
+                    Estoque
+                </a>
+            </div>
+            <div class="hidden sm:flex sm:items-center">
+                <button
+                    class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] p-1 rounded-full text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <span class="sr-only">
+                        Ver notificações
+                    </span>
+                    <i class="fas fa-bell">
+                    </i>
+                </button>
+                <div class="ml-3 relative">
+                    <div>
+                        <button aria-expanded="false" aria-haspopup="true"
+                            class="max-w-xs bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            id="user-menu-button">
+                            <span class="sr-only">
+                                Abrir menu do usuário
+                            </span>
+                            <img alt="Foto de perfil do usuário" class="h-8 w-8 rounded-full"
+                                src="https://storage.googleapis.com/a1aa/image/Q3S3qKzLT57JNZLBcpcpNTBgae4KDwA9m5pvtFT0rAIiKT4JA.jpg" />
+                        </button>
+                    </div>
+                    <div class="absolute right-0 z-10 hidden mt-2 w-48 bg-white rounded-md shadow-lg"
+                        id="user-menu">
+                        <div aria-labelledby="user-menu-button" aria-orientation="vertical" class="py-1"
+                            role="menu">
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="#"
+                                role="menuitem">
+                                Suporte
+                            </a>
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="./conta.html"
+                                role="menuitem">
+                                Minha Conta
+                            </a>
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="#"
+                                role="menuitem">
+                                Sair
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center sm:hidden">
+                <button aria-controls="mobile-menu" aria-expanded="false"
+                    class="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    id="mobile-menu-button">
+                    <span class="sr-only">
+                        Abrir menu principal
+                    </span>
+                    <i class="fas fa-bars">
+                    </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                href="./dashboard.html">
+                Dashboard
+            </a>
+            <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                href="./financeiro.html">
+                Financeiro
+            </a>
+            <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                href="./membros.html">
+                Membros
+            </a>
+            <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                href="#">
+                Estoque
+            </a>
+        </div>
+    </div>
+</nav>
+  <div class="p-4">
+    <div class="flex justify-end mb-4">
+      <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded flex items-center"
+        onclick="openModal('addMemberModal')">
+        <i class="fas fa-plus mr-2">
+        </i>
+        Adicionar Novo Membro
+      </button>
+    </div>
+    <div id="memberList">
+      <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center" data-member-id="1">
+        <img alt="User profile picture" class="rounded-full mr-4" height="50"
+          src="https://storage.googleapis.com/a1aa/image/os7AGxS2Q67DMtO4sT3G1goT3ZsSQPBr74s6YoGGQxSGcm8E.jpg"
+          width="50" />
+        <div class="flex-1">
+          <div class="font-bold text-lg" id="memberName-1">
+            Ermeson Barros
+          </div>
+          <div class="text-gray-600" id="memberStatus-1">
+            Saiu: 17:59h
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button class="bg-white border border-gray-300 rounded p-2 mr-2" onclick="openModal('extratoModal')"
+            title="Extrato">
+            <i class="fas fa-file-alt">
+            </i>
+          </button>
+          <button class="bg-white border border-gray-300 rounded p-2" onclick="openEditModal(1)">
+            <i class="fas fa-pencil-alt">
+            </i>
+          </button>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center" data-member-id="2">
+        <img alt="User profile picture" class="rounded-full mr-4" height="50"
+          src="https://storage.googleapis.com/a1aa/image/os7AGxS2Q67DMtO4sT3G1goT3ZsSQPBr74s6YoGGQxSGcm8E.jpg"
+          width="50" />
+        <div class="flex-1">
+          <div class="font-bold text-lg" id="memberName-2">
+            José Silva
+          </div>
+          <div class="text-gray-600" id="memberStatus-2">
+            Chegou: 07:43h
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button class="bg-white border border-gray-300 rounded p-2 mr-2" onclick="openModal('extratoModal')"
+            title="Extrato">
+            <i class="fas fa-file-alt">
+            </i>
+          </button>
+          <button class="bg-white border border-gray-300 rounded p-2" onclick="openEditModal(2)">
+            <i class="fas fa-pencil-alt">
+            </i>
+          </button>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg p-4 mb-4 flex items-center" data-member-id="3">
+        <div class="relative">
+          <img alt="User profile picture" class="rounded-full mr-4" height="50"
+            src="https://storage.googleapis.com/a1aa/image/os7AGxS2Q67DMtO4sT3G1goT3ZsSQPBr74s6YoGGQxSGcm8E.jpg"
+            width="50" />
+          <span class="absolute top-0 left-0 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+            Férias
+          </span>
+        </div>
+        <div class="flex-1">
+          <div class="font-bold text-lg" id="memberName-3">
+            Renata Okida
+          </div>
+          <div class="text-gray-600" id="memberStatus-3">
+            --:--
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button class="bg-white border border-gray-300 rounded p-2 mr-2" onclick="openModal('extratoModal')"
+            title="Extrato">
+            <i class="fas fa-file-alt">
+            </i>
+          </button>
+          <button class="bg-white border border-gray-300 rounded p-2" onclick="openEditModal(3)">
+            <i class="fas fa-pencil-alt">
+            </i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Edit Modal -->
+  <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="editModal">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-500 opacity-75">
+        </div>
+      </div>
+      <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                Editar Informações
+              </h3>
+              <div class="mt-2">
+                <form id="editForm">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="editName">
+                      Nome
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="editName" type="text" placeholder="Nome" />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="editNumber">
+                      Número
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="editNumber" type="text" placeholder="Número" />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="editEmail">
+                      Email
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="editEmail" type="email" placeholder="Email" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <button
+            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+            onclick="saveEdit()" type="button">
+            Salvar
+          </button>
+          <button
+            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+            onclick="closeModal('editModal')" type="button">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add Member Modal -->
+  <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="addMemberModal">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-500 opacity-75">
+        </div>
+      </div>
+      <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                Adicionar Novo Membro
+              </h3>
+              <div class="mt-2">
+                <form id="addMemberForm">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="addName">
+                      Nome
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="addName" type="text" placeholder="Nome" />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="addNumber">
+                      Número
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="addNumber" type="text" placeholder="Número" />
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="addEmail">
+                      Email
+                    </label>
+                    <input
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="addEmail" type="email" placeholder="Email" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <button
+            class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+            onclick="addMember()" type="button">
+            Adicionar
+          </button>
+          <button
+            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+            onclick="closeModal('addMemberModal')" type="button">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Extrato Modal -->
+  <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="extratoModal">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+        <div class="absolute inset-0 bg-gray-500 opacity-75">
+        </div>
+      </div>
+      <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                Extrato
+              </h3>
+              <div class="mt-2">
+                <ul class="list-disc pl-5">
+                  <li>
+                    Holerite de Janeiro: R$ 3.000,00
+                  </li>
+                  <li>
+                    Holerite de Fevereiro: R$ 3.200,00
+                  </li>
+                  <li>
+                    Último Pagamento: R$ 3.500,00
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          <button
+            class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+            onclick="closeModal('extratoModal')" type="button">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentEditId = null;
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+    function openEditModal(memberId) {
+      currentEditId = memberId;
+      const name = document.getElementById(`memberName-${memberId}`).innerText;
+      const status = document.getElementById(`memberStatus-${memberId}`).innerText;
+      document.getElementById('editName').value = name;
+      document.getElementById('editNumber').value = ''; // Add logic to fetch and set the number
+      document.getElementById('editEmail').value = ''; // Add logic to fetch and set the email
+      openModal('editModal');
+    }
+    function saveEdit() {
+      const name = document.getElementById('editName').value;
+      document.getElementById(`memberName-${currentEditId}`).innerText = name;
+      closeModal('editModal');
+    }
+
+    function addMember() {
+      const name = document.getElementById('addName').value.trim();
+      const email = document.getElementById('addEmail').value.trim();
+      if (!name || !email) {
+        alert('Nome e email são obrigatórios!');
+        return;
+      }
+      const number = document.getElementById('addNumber').value;
+      const newMemberId = Date.now();
+      const memberList = document.getElementById('memberList');
+      const newMember = document.createElement('div');
+      newMember.className = 'bg-white shadow-md rounded-lg p-4 mb-4 flex items-center';
+      newMember.setAttribute('data-member-id', newMemberId);
+      newMember.innerHTML = `
+      <img alt="User profile picture" class="rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/os7AGxS2Q67DMtO4sT3G1goT3ZsSQPBr74s6YoGGQxSGcm8E.jpg" width="50"/>
+      <div class="flex-1">
+        <div class="font-bold text-lg" id="memberName-${newMemberId}">${name}</div>
+        <div class="text-gray-600" id="memberStatus-${newMemberId}">Número: ${number}</div>
+      </div>
+      <div class="flex items-center">
+        <button class="bg-white border border-gray-300 rounded p-2 mr-2" onclick="openModal('extratoModal')" title="Extrato">
+          <i class="fas fa-file-alt"></i>
+        </button>
+        <button class="bg-white border border-gray-300 rounded p-2" onclick="openEditModal(${newMemberId})">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+      </div>
+    `;
+      memberList.appendChild(newMember);
+      closeModal('addMemberModal');
+    }
+  </script>
+</body>
+
+</html>
