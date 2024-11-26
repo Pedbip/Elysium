@@ -383,10 +383,10 @@
     function addMember() {
       const name = document.getElementById('addName').value.trim();
       const email = document.getElementById('addEmail').value.trim();
-      if (!name || !email) {
-        alert('Nome e email são obrigatórios!');
-        return;
-      }
+      // if (!name || !email) {
+      //   alert('Nome e email são obrigatórios!');
+      //   return;
+      // }
       const number = document.getElementById('addNumber').value;
       const newMemberId = Date.now();
       const memberList = document.getElementById('memberList');
@@ -397,7 +397,6 @@
       <img alt="User profile picture" class="rounded-full mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/os7AGxS2Q67DMtO4sT3G1goT3ZsSQPBr74s6YoGGQxSGcm8E.jpg" width="50"/>
       <div class="flex-1">
         <div class="font-bold text-lg" id="memberName-${newMemberId}">${name}</div>
-        <div class="text-gray-600" id="memberStatus-${newMemberId}">Número: ${number}</div>
       </div>
       <div class="flex items-center">
         <button class="bg-white border border-gray-300 rounded p-2 mr-2" onclick="openModal('extratoModal')" title="Extrato">
