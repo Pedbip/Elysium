@@ -1,9 +1,9 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url("../IMG/onda-azul.png");
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-position: top; /* Ajuste a posição conforme necessário */
-    background-size: auto; /* Mantém o tamanho original da imagem */
+    background-repeat: no-repeat;
+    background-position: top; 
+    background-size: auto;
 }
 
 img {
@@ -34,3 +34,7 @@ img {
     transform: translateY(0);
 }
  
+.space {
+    margin-top: clamp(2rem, 15rem, 20rem);
+}
+
