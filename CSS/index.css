@@ -1,3 +1,36 @@
-button {
-    ba: #2f9dcf;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../IMG/onda-azul.png");
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: top; /* Ajuste a posição conforme necessário */
+    background-size: auto; /* Mantém o tamanho original da imagem */
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 75vh;
+    display: block;
+    margin: 0 auto;
+}
+
+#elysium-logo {
+    width: auto;
+    height: auto;
+}
+
+.distance {
+    margin-bottom: 20%;
+    margin-top: 20%;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+ 

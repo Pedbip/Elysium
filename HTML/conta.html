@@ -1,94 +1,15 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Minha conta
+        Elysium | Minha Conta
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 50;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #2d3748;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            border-radius: 8px;
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const emailElement = document.getElementById('email');
-            const emailIcon = document.getElementById('email-icon');
-            const usernameElement = document.getElementById('username');
-            const usernameIcon = document.getElementById('username-icon');
-            const modal = document.getElementById('username-modal');
-            const closeModal = document.getElementById('close-modal');
-            const saveUsername = document.getElementById('save-username');
-            const usernameInput = document.getElementById('username-input');
-
-            emailIcon.addEventListener('click', function () {
-                if (emailElement.textContent.includes('*')) {
-                    emailElement.textContent = 'pessoa1@gmail.com';
-                } else {
-                    emailElement.textContent = 'p*****1@gmail.com';
-                }
-            });
-
-            usernameIcon.addEventListener('click', function () {
-                modal.style.display = 'block';
-                usernameInput.value = usernameElement.textContent.trim();
-            });
-
-            closeModal.addEventListener('click', function () {
-                modal.style.display = 'none';
-            });
-
-            saveUsername.addEventListener('click', function () {
-                const newUsername = usernameInput.value.trim();
-                if (newUsername !== '') {
-                    usernameElement.textContent = newUsername;
-                }
-                modal.style.display = 'none';
-            });
-
-            window.addEventListener('click', function (event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            });
-
-            modal.addEventListener('mousedown', function (event) {
-                if (event.target == modal) {
-                    modal.dataset.mouseDownOutside = 'true';
-                } else {
-                    modal.dataset.mouseDownOutside = 'false';
-                }
-            });
-
-            modal.addEventListener('mouseup', function (event) {
-                if (modal.dataset.mouseDownOutside === 'true' && event.target == modal) {
-                    modal.style.display = 'none';
-                }
-                modal.dataset.mouseDownOutside = 'false';
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="../CSS/conta.css">
+    <link rel="shortcut icon" href="../IMG/Elysium-logo.png" type="image/x-icon">
 </head>
 
 <body class="bg-[#e7f6ff] text-white font-sans">
@@ -217,9 +138,9 @@
             <button id="save-username" class="bg-teal-500 text-white px-4 py-2 rounded">Salvar</button>
         </div>
     </div>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
-
-    <script>
+    <script src="../JS/conta.js">
 
         var ht = new HT({
 

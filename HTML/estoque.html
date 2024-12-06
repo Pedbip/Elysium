@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysium | Estoque</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/estoque.css">
+    <link rel="shortcut icon" href="../IMG/Elysium-logo.png" type="image/x-icon">
+</head>
+
+<body class="font-roboto bg-gray-100">
+    <nav class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="./dashboard.html">
+                        <img alt="Logo da empresa Elysium" class="h-8 w-auto shadow-sm" height="50"
+                            src="../IMG/Elysium-logo-branca.png" />
+                    </a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        href="./dashboard.html">
+                        Dashboard
+                    </a>
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        href="./financeiro.html">
+                        Financeiro
+                    </a>
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        href="./membros.html">
+                        Membros
+                    </a>
+                    <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                        href="./estoque.html">
+                        Estoque
+                    </a>
+                </div>
+                <div class="hidden sm:flex sm:items-center">
+                    <button
+                        class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] p-1 rounded-full text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="sr-only">
+                            Ver notificações
+                        </span>
+                        <i class="fas fa-bell">
+                        </i>
+                    </button>
+                    <div class="ml-3 relative">
+                        <div>
+                            <button aria-expanded="false" aria-haspopup="true"
+                                class="max-w-xs bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                id="user-menu-button">
+                                <span class="sr-only">Abrir menu do usuário</span>
+                                <img alt="User  profile picture" class="h-8 w-8 rounded-full"
+                                    src="https://storage.googleapis.com/a1aa/image/Q3S3qKzLT57JNZLBcpcpNTBgae4KDwA9m5pvtFT0rAIiKT4JA.jpg" />
+                            </button>
+                        </div>
+                        <div class="absolute right-0 z-10 hidden mt-2 w-48 bg-white rounded-md shadow-lg"
+                            id="user-menu">
+                            <div class="py-1" role="menu" aria-orientation="vertical"
+                                aria-labelledby="user-menu-button">
+                                <a href="https://pedroalmario.github.io/lysisCompleto/#contact" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem">Suporte</a>
+                                <a href="./conta.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem">Minha Conta</a>
+                                <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    role="menuitem">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center sm:hidden">
+                    <button aria-controls="mobile-menu" aria-expanded="false"
+                        class="text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        id="mobile-menu-button">
+                        <span class="sr-only">
+                            Abrir menu principal
+                        </span>
+                        <i class="fas fa-bars">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                    href="./dashboard.html">
+                    Dashboard
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                    href="./financeiro.html">
+                    Financeiro
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                    href="./membros.html">
+                    Membros
+                </a>
+                <a class="border-transparent text-white hover:border-gray-300 hover:text-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+                    href="./estoque.html">
+                    Estoque
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mt-8 px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold font-poppins">Gerenciamento de Estoque</h1>
+            <button id="addProductBtn" class="bg-sky-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Adicionar Produto</button>
+        </div>
+        <hr class="mb-4">
+        <div id="productCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- os cards vão aparecer aqui -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg w-full max-w-md mx-4 sm:mx-auto">
+            <h2 class="text-xl font-bold mb-4" id="modalTitle">Adicionar Produto</h2>
+            <form id="productForm">
+                <div class="mb-4">
+                    <label for="productName" class="block text-gray-700">Nome do Produto</label>
+                    <input type="text" id="productName" class="w-full px-4 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="productQuantity" class="block text-gray-700">Quantidade</label>
+                    <input type="number" id="productQuantity" class="w-full px-4 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="productPrice" class="block text-gray-700">Preço</label>
+                    <input type="number" id="productPrice" class="w-full px-4 py-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="productImage" class="block text-gray-700">Imagem do Produto</label>
+                    <input type="file" id="productImage" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" id="cancelBtn"
+                        class="bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancelar</button>
+                    <button type="submit" class="bg-sky-500 hover:bg-indigo-600 text-white px-4 py-2 rounded">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
+    <script src="../JS/estoque.js">
+
+        var ht = new HT({
+
+            token: "39b241d21501bd532bc34c06f18d0ec7"
+
+        });
+
+    </script>
+</body>
+
+</html>

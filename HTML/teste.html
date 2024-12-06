@@ -1,107 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Usuários</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        .user-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .user-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 5px;
-        }
-
-        .edit-options {
-            display: none;
-            flex-direction: column;
-            margin-top: 10px;
-        }
-
-        .edit-options button {
-            margin: 5px 0;
-        }
-    </style>
+    <title>Fade de Cor Vertical com Tailwind</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Lista de Usuários</h1>
-    <ul class="user-list" id="userList">
-        <li class="user-item" data-id="1">
-            <span>Usuário 1</span>
-            <button class="edit-button">✏️</button>
-            <div class="edit-options">
-                <button class="delete-button">Deletar Usuário</button>
-                <button class="vacation-button">Férias</button>
-            </div>
-        </li>
-        <li class="user-item" data-id="2">
-            <span>Usuário 2</span>
-            <button class="edit-button">✏️</button>
-            <div class="edit-options">
-                <button class="delete-button">Deletar Usuário</button>
-                <button class="vacation-button">Férias</button>
-            </div>
-        </li>
-        <li class="user-item" data-id="3">
-            <span>Usuário 3</span>
-            <button class="edit-button">✏️</button>
-            <div class="edit-options">
-                <button class="delete-button">Deletar Usuário</button>
-                <button class="vacation-button">Férias</button>
-            </div>
-        </li>
-    </ul>
+<body class="h-screen">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const userList = document.getElementById('userList');
+    <div class="bg-gradient-to-b from-blue-500 to-transparent h-full">
+        <!-- O fade de cor vertical é aplicado aqui -->
+    </div>
 
-            // Toggle edit options
-            userList.addEventListener('click', (event) => {
-                const target = event.target;
-
-                if (target.classList.contains('edit-button')) {
-                    const editOptions = target.nextElementSibling;
-                    editOptions.style.display = editOptions.style.display === 'block' ? 'none' : 'block';
-                }
-
-                // Delete user functionality
-                if (target.classList.contains('delete-button')) {
-                    const userItem = target.closest('.user-item');
-                    userItem.remove();
-                    alert(`Usuário ${userItem.dataset.id} foi deletado!`);
-                }
-
-                // Vacation functionality
-                if (target.classList.contains('vacation-button')) {
-                    const userItem = target.closest('.user-item');
-                    alert(`Usuário ${userItem.dataset.id} entrou em férias!`);
-                }
-            });
-        });
-    </script>
-    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
-
-    <script>
-    
-      var ht = new HT({
-    
-        token: "39b241d21501bd532bc34c06f18d0ec7"   
-    
-     });
-    
-    </script>
 </body>
 </html>

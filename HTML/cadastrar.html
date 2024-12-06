@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elysium | Login</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Elysium | Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/cadastrar.css">
     <link rel="shortcut icon" href="../IMG/Elysium-logo.png" type="image/x-icon">
 </head>
 
-<body class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] shadow-md">
+<body>
     <div class="box">
         <form action="./dashboard.html" autocomplete="off">
-            <h2>Fazer Login</h2>
+            <h2>Cadastre-se</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Nome Completo</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="email" required="required">
+                <span>Email</span>
+                <i></i>
+            </div>
             <div class="inputBox">
                 <input type="text" required="required">
                 <span>Usuário</span>
@@ -27,21 +34,17 @@
                 <i></i>
             </div>
             <div class="links">
-                <a href="./esquecerSenha.html">Esqueceu a senha?</a>
-                <a href="./cadastrar.html">Cadastre-se</a>
+                <a href="./login.html">Já tem uma conta?</a>
             </div>
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
     <script>
         var ht = new HT({
-
             token: "39b241d21501bd532bc34c06f18d0ec7"
-
         });
-
     </script>
 </body>
 

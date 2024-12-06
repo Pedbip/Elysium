@@ -4,44 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elysium | Login</title>
+    <title>Elysium | Esqueceu a Senha</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/esquecerSenha.css">
     <link rel="shortcut icon" href="../IMG/Elysium-logo.png" type="image/x-icon">
 </head>
 
-<body class="bg-gradient-to-r from-[#3f5293] to-[#2f9dcf] shadow-md">
+<body>
     <div class="box">
-        <form action="./dashboard.html" autocomplete="off">
-            <h2>Fazer Login</h2>
+        <form id="forgotPasswordForm" autocomplete="off">
+            <h2>Esqueceu a Senha</h2>
             <div class="inputBox">
-                <input type="text" required="required">
-                <span>Usuário</span>
-                <i></i>
-            </div>
-            <div class="inputBox">
-                <input type="password" required="required">
-                <span>Senha</span>
+                <input type="email" required="required">
+                <span>Email</span>
                 <i></i>
             </div>
             <div class="links">
-                <a href="./esquecerSenha.html">Esqueceu a senha?</a>
-                <a href="./cadastrar.html">Cadastre-se</a>
+                <a href="./login.html">Voltar ao Login</a>
             </div>
-            <input type="submit" value="Entrar">
+            <input type="submit" value="Enviar">
         </form>
     </div>
+
+    <div class="popup" id="popup">
+        <h3>Email Enviado</h3>
+        <p class="mb-3">Um email com link de recuperação foi enviado.</p>
+        <button onclick="closePopup()">Fechar</button>
+    </div>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js"></script>
-    <script>
+    <script src="https://plugin.handtalk.me/web/latest/handtalk.min.js">
+    </script>
+    <script src="../JS/esquecerSenha.js">
         var ht = new HT({
-
             token: "39b241d21501bd532bc34c06f18d0ec7"
-
         });
-
     </script>
 </body>
 
